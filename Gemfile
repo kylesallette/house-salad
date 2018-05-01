@@ -19,6 +19,7 @@ gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 gem 'faraday'
+gem 'figaro'
 gem 'bootstrap-sass'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
@@ -39,6 +40,8 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'pry'
   gem 'rspec-rails'
+  gem 'capybara'
+  gem 'launchy'
 end
 
 group :development do
