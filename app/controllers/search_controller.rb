@@ -8,9 +8,7 @@ class SearchController < ApplicationController
     end
     response = @conn.get("/congress/v1/members/house/#{state}/current.json")
     @members = JSON.parse(response.body, symbolize_names: true)[:results]
-
     results = JSON.parse(response.body, symbolize_names: true)[:results]
-
     @members  = results.map do |result|
      Member.new(result)
   end
